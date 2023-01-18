@@ -1,16 +1,20 @@
 import clsx from "clsx";
 
-const Card = ({ className, children }) => {
-    return (
-        <div
-            className={clsx(
-                "rounded-3xl px-10 py-4 drop-shadow-xl bg-white",
-                className
-            )}
-        >
-            {children}
-        </div>
-    );
+interface CardProps {
+  className?: string;
+  children: any;
+}
+const Card = ({ className, children }: CardProps) => {
+  return (
+    <div
+      className={clsx(
+        "rounded-3xl px-10 py-4 drop-shadow-xl bg-white",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default Card;
