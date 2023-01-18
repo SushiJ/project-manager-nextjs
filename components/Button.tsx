@@ -47,9 +47,22 @@ const buttonClasses = cva(
 export interface ButtonProps
     extends React.HTMLAttributes<HTMLButtonElement>,
         VariantProps<typeof buttonClasses> {}
-// @ts-ignore
-const Button = ({ children }) => {
-    return <button>{children}</button>;
+
+const Button: React.FC<ButtonProps> = ({
+    children,
+    intent,
+    size,
+    className,
+    ...props
+}) => {
+    return (
+        <button
+            className={buttonClasses({ intent, size, className })}
+            {...props}
+        >
+            {children}
+        </button>
+    );
 };
 
 export default Button;
