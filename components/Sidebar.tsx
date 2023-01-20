@@ -8,10 +8,10 @@ const links = [
     link: "/home",
   },
   { label: "Calendar", icon: "Calendar", link: "/calender" },
-  { label: "Profile", icon: "Profile", link: "/profile" },
+  { label: "Profile", icon: "User", link: "/profile" },
   {
     label: "Settings",
-    icon: "Setting",
+    icon: "Settings",
     link: "/settings",
   },
 ];
@@ -19,8 +19,8 @@ const links = [
 const Sidebar = () => {
   return (
     <Card className="h-full w-40 flex items-center justify-between flex-wrap">
-      {links.map((link, idx) => (
-        <SidebarLink link={link} key={idx} />
+      {links.map((link) => (
+        <SidebarLink link={link} />
       ))}
     </Card>
   );

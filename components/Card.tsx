@@ -8,7 +8,7 @@ const Card = ({ className, children }: CardProps) => {
   return (
     <div
       className={clsx(
-        "rounded-3xl px-10 py-4 drop-shadow-xl bg-white",
+        "rounded-2xl gap-2 px-10 py-4 drop-shadow-xl bg-white",
         className
       )}
     >
