@@ -13,10 +13,11 @@ export default function DashBoardRootLayout({ children }) {
     <html lang="en" className={clsx(inter.variable, "dark")}>
       <head />
       <body className="h-screen w-screen rainbow-mesh p-6">
-        <GlassPane className=" gap-2 w-full h-full flex items-center justify-center">
+        <GlassPane className="p-4 w-full h-full flex items-center justify-center">
           <Sidebar />
           <main className="w-full pl-6 h-full">{children}</main>
         </GlassPane>
+        <div id="modal"></div>
       </body>
     </html>
   );
